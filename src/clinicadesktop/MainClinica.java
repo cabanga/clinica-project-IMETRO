@@ -43,19 +43,19 @@ public class MainClinica extends javax.swing.JPanel {
         RastreioBtn = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         BtnPanel2 = new javax.swing.JPanel();
-        RastreioBtn1 = new javax.swing.JButton();
+        PagamentoBtn = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         BtnPanel3 = new javax.swing.JPanel();
-        RastreioBtn2 = new javax.swing.JButton();
+        AtendimentoBtn = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         BtnPanel4 = new javax.swing.JPanel();
-        RastreioBtn3 = new javax.swing.JButton();
+        ListaAtendidosBtn = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         BtnPanel5 = new javax.swing.JPanel();
-        RastreioBtn4 = new javax.swing.JButton();
+        ListaMedicosBtn = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Tempus Sans ITC", 0, 48)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 51, 51));
         jLabel5.setText("JM CABANGA");
 
@@ -129,11 +129,11 @@ public class MainClinica extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        RastreioBtn1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/debit-card.png"))); // NOI18N
-        RastreioBtn1.setContentAreaFilled(false);
-        RastreioBtn1.addActionListener(new java.awt.event.ActionListener() {
+        PagamentoBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/debit-card.png"))); // NOI18N
+        PagamentoBtn.setContentAreaFilled(false);
+        PagamentoBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RastreioBtn1ActionPerformed(evt);
+                PagamentoBtnActionPerformed(evt);
             }
         });
 
@@ -147,7 +147,7 @@ public class MainClinica extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BtnPanel2Layout.createSequentialGroup()
                 .addContainerGap(36, Short.MAX_VALUE)
                 .addGroup(BtnPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(RastreioBtn1)
+                    .addComponent(PagamentoBtn)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(39, 39, 39))
         );
@@ -155,17 +155,17 @@ public class MainClinica extends javax.swing.JPanel {
             BtnPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BtnPanel2Layout.createSequentialGroup()
                 .addGap(21, 21, 21)
-                .addComponent(RastreioBtn1)
+                .addComponent(PagamentoBtn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3)
                 .addContainerGap(39, Short.MAX_VALUE))
         );
 
-        RastreioBtn2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/reparation.png"))); // NOI18N
-        RastreioBtn2.setContentAreaFilled(false);
-        RastreioBtn2.addActionListener(new java.awt.event.ActionListener() {
+        AtendimentoBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/reparation.png"))); // NOI18N
+        AtendimentoBtn.setContentAreaFilled(false);
+        AtendimentoBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RastreioBtn2ActionPerformed(evt);
+                AtendimentoBtnActionPerformed(evt);
             }
         });
 
@@ -179,7 +179,7 @@ public class MainClinica extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BtnPanel3Layout.createSequentialGroup()
                 .addContainerGap(36, Short.MAX_VALUE)
                 .addGroup(BtnPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(RastreioBtn2)
+                    .addComponent(AtendimentoBtn)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(39, 39, 39))
         );
@@ -187,17 +187,17 @@ public class MainClinica extends javax.swing.JPanel {
             BtnPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BtnPanel3Layout.createSequentialGroup()
                 .addGap(21, 21, 21)
-                .addComponent(RastreioBtn2)
+                .addComponent(AtendimentoBtn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4)
                 .addContainerGap(39, Short.MAX_VALUE))
         );
 
-        RastreioBtn3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/group-of-males.png"))); // NOI18N
-        RastreioBtn3.setContentAreaFilled(false);
-        RastreioBtn3.addActionListener(new java.awt.event.ActionListener() {
+        ListaAtendidosBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/group-of-males.png"))); // NOI18N
+        ListaAtendidosBtn.setContentAreaFilled(false);
+        ListaAtendidosBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RastreioBtn3ActionPerformed(evt);
+                ListaAtendidosBtnActionPerformed(evt);
             }
         });
 
@@ -210,7 +210,7 @@ public class MainClinica extends javax.swing.JPanel {
             BtnPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BtnPanel4Layout.createSequentialGroup()
                 .addContainerGap(36, Short.MAX_VALUE)
-                .addComponent(RastreioBtn3)
+                .addComponent(ListaAtendidosBtn)
                 .addGap(39, 39, 39))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BtnPanel4Layout.createSequentialGroup()
                 .addContainerGap()
@@ -221,17 +221,17 @@ public class MainClinica extends javax.swing.JPanel {
             BtnPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BtnPanel4Layout.createSequentialGroup()
                 .addGap(21, 21, 21)
-                .addComponent(RastreioBtn3)
+                .addComponent(ListaAtendidosBtn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel8)
                 .addContainerGap(39, Short.MAX_VALUE))
         );
 
-        RastreioBtn4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/first-aid-kit.png"))); // NOI18N
-        RastreioBtn4.setContentAreaFilled(false);
-        RastreioBtn4.addActionListener(new java.awt.event.ActionListener() {
+        ListaMedicosBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/first-aid-kit.png"))); // NOI18N
+        ListaMedicosBtn.setContentAreaFilled(false);
+        ListaMedicosBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RastreioBtn4ActionPerformed(evt);
+                ListaMedicosBtnActionPerformed(evt);
             }
         });
 
@@ -242,20 +242,22 @@ public class MainClinica extends javax.swing.JPanel {
         BtnPanel5.setLayout(BtnPanel5Layout);
         BtnPanel5Layout.setHorizontalGroup(
             BtnPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BtnPanel5Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(RastreioBtn4)
-                .addGap(39, 39, 39))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BtnPanel5Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(BtnPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(BtnPanel5Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(BtnPanel5Layout.createSequentialGroup()
+                        .addComponent(ListaMedicosBtn)
+                        .addGap(39, 39, 39))))
         );
         BtnPanel5Layout.setVerticalGroup(
             BtnPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BtnPanel5Layout.createSequentialGroup()
                 .addGap(21, 21, 21)
-                .addComponent(RastreioBtn4)
+                .addComponent(ListaMedicosBtn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel9)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -363,21 +365,24 @@ public class MainClinica extends javax.swing.JPanel {
         this.close();
     }//GEN-LAST:event_RastreioBtnActionPerformed
 
-    private void RastreioBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RastreioBtn1ActionPerformed
+    private void PagamentoBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PagamentoBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_RastreioBtn1ActionPerformed
+        Pagamento _pagamento = new Pagamento();
+        frame.add(_pagamento);
+        frame.setVisible(true);
+    }//GEN-LAST:event_PagamentoBtnActionPerformed
 
-    private void RastreioBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RastreioBtn2ActionPerformed
+    private void AtendimentoBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AtendimentoBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_RastreioBtn2ActionPerformed
+    }//GEN-LAST:event_AtendimentoBtnActionPerformed
 
-    private void RastreioBtn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RastreioBtn3ActionPerformed
+    private void ListaAtendidosBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListaAtendidosBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_RastreioBtn3ActionPerformed
+    }//GEN-LAST:event_ListaAtendidosBtnActionPerformed
 
-    private void RastreioBtn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RastreioBtn4ActionPerformed
+    private void ListaMedicosBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListaMedicosBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_RastreioBtn4ActionPerformed
+    }//GEN-LAST:event_ListaMedicosBtnActionPerformed
 
     public void close(){
         //frame.setVisible(false);
@@ -385,17 +390,17 @@ public class MainClinica extends javax.swing.JPanel {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton AtendimentoBtn;
     private javax.swing.JPanel BtnPanel;
     private javax.swing.JPanel BtnPanel1;
     private javax.swing.JPanel BtnPanel2;
     private javax.swing.JPanel BtnPanel3;
     private javax.swing.JPanel BtnPanel4;
     private javax.swing.JPanel BtnPanel5;
+    private javax.swing.JButton ListaAtendidosBtn;
+    private javax.swing.JButton ListaMedicosBtn;
+    private javax.swing.JButton PagamentoBtn;
     private javax.swing.JButton RastreioBtn;
-    private javax.swing.JButton RastreioBtn1;
-    private javax.swing.JButton RastreioBtn2;
-    private javax.swing.JButton RastreioBtn3;
-    private javax.swing.JButton RastreioBtn4;
     private javax.swing.JButton RegistoBtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
