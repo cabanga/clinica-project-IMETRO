@@ -42,6 +42,18 @@ public class MainClinica extends javax.swing.JPanel {
         BtnPanel1 = new javax.swing.JPanel();
         RastreioBtn = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        BtnPanel2 = new javax.swing.JPanel();
+        RastreioBtn1 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        BtnPanel3 = new javax.swing.JPanel();
+        RastreioBtn2 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        BtnPanel4 = new javax.swing.JPanel();
+        RastreioBtn3 = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        BtnPanel5 = new javax.swing.JPanel();
+        RastreioBtn4 = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 51, 51));
@@ -82,7 +94,7 @@ public class MainClinica extends javax.swing.JPanel {
                 .addComponent(RegistoBtn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1)
-                .addContainerGap(60, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         RastreioBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/petri-dish.png"))); // NOI18N
@@ -101,7 +113,7 @@ public class MainClinica extends javax.swing.JPanel {
         BtnPanel1Layout.setHorizontalGroup(
             BtnPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BtnPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(36, Short.MAX_VALUE)
                 .addGroup(BtnPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(RastreioBtn)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -117,24 +129,168 @@ public class MainClinica extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        RastreioBtn1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/debit-card.png"))); // NOI18N
+        RastreioBtn1.setContentAreaFilled(false);
+        RastreioBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RastreioBtn1ActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel3.setText("Pagamento");
+
+        javax.swing.GroupLayout BtnPanel2Layout = new javax.swing.GroupLayout(BtnPanel2);
+        BtnPanel2.setLayout(BtnPanel2Layout);
+        BtnPanel2Layout.setHorizontalGroup(
+            BtnPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BtnPanel2Layout.createSequentialGroup()
+                .addContainerGap(36, Short.MAX_VALUE)
+                .addGroup(BtnPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(RastreioBtn1)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(39, 39, 39))
+        );
+        BtnPanel2Layout.setVerticalGroup(
+            BtnPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BtnPanel2Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(RastreioBtn1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel3)
+                .addContainerGap(39, Short.MAX_VALUE))
+        );
+
+        RastreioBtn2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/reparation.png"))); // NOI18N
+        RastreioBtn2.setContentAreaFilled(false);
+        RastreioBtn2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RastreioBtn2ActionPerformed(evt);
+            }
+        });
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel4.setText("Atendimento");
+
+        javax.swing.GroupLayout BtnPanel3Layout = new javax.swing.GroupLayout(BtnPanel3);
+        BtnPanel3.setLayout(BtnPanel3Layout);
+        BtnPanel3Layout.setHorizontalGroup(
+            BtnPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BtnPanel3Layout.createSequentialGroup()
+                .addContainerGap(36, Short.MAX_VALUE)
+                .addGroup(BtnPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(RastreioBtn2)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(39, 39, 39))
+        );
+        BtnPanel3Layout.setVerticalGroup(
+            BtnPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BtnPanel3Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(RastreioBtn2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel4)
+                .addContainerGap(39, Short.MAX_VALUE))
+        );
+
+        RastreioBtn3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/group-of-males.png"))); // NOI18N
+        RastreioBtn3.setContentAreaFilled(false);
+        RastreioBtn3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RastreioBtn3ActionPerformed(evt);
+            }
+        });
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel8.setText("Listar Atendidos");
+
+        javax.swing.GroupLayout BtnPanel4Layout = new javax.swing.GroupLayout(BtnPanel4);
+        BtnPanel4.setLayout(BtnPanel4Layout);
+        BtnPanel4Layout.setHorizontalGroup(
+            BtnPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BtnPanel4Layout.createSequentialGroup()
+                .addContainerGap(36, Short.MAX_VALUE)
+                .addComponent(RastreioBtn3)
+                .addGap(39, 39, 39))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BtnPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        BtnPanel4Layout.setVerticalGroup(
+            BtnPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BtnPanel4Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(RastreioBtn3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel8)
+                .addContainerGap(39, Short.MAX_VALUE))
+        );
+
+        RastreioBtn4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/first-aid-kit.png"))); // NOI18N
+        RastreioBtn4.setContentAreaFilled(false);
+        RastreioBtn4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RastreioBtn4ActionPerformed(evt);
+            }
+        });
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel9.setText("Listar Medicos");
+
+        javax.swing.GroupLayout BtnPanel5Layout = new javax.swing.GroupLayout(BtnPanel5);
+        BtnPanel5.setLayout(BtnPanel5Layout);
+        BtnPanel5Layout.setHorizontalGroup(
+            BtnPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BtnPanel5Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(RastreioBtn4)
+                .addGap(39, 39, 39))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BtnPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        BtnPanel5Layout.setVerticalGroup(
+            BtnPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BtnPanel5Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(RastreioBtn4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel9)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(29, 29, 29)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(BtnPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(BtnPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 1190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(29, 29, 29)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 1190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel7)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel5))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel7)
+                        .addGap(240, 240, 240)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(BtnPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(42, 42, 42)
+                                .addComponent(BtnPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(BtnPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(BtnPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel5)))
-                .addContainerGap(32, Short.MAX_VALUE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(BtnPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(BtnPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(59, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(307, 307, 307)
@@ -153,11 +309,21 @@ public class MainClinica extends javax.swing.JPanel {
                         .addComponent(jLabel5)))
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(12, 12, 12)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(BtnPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BtnPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(350, Short.MAX_VALUE))
+                    .addComponent(BtnPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(BtnPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(BtnPanel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGap(17, 17, 17)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(BtnPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(9, 9, 9)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(BtnPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(BtnPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(139, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(112, 112, 112)
@@ -197,6 +363,22 @@ public class MainClinica extends javax.swing.JPanel {
         this.close();
     }//GEN-LAST:event_RastreioBtnActionPerformed
 
+    private void RastreioBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RastreioBtn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_RastreioBtn1ActionPerformed
+
+    private void RastreioBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RastreioBtn2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_RastreioBtn2ActionPerformed
+
+    private void RastreioBtn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RastreioBtn3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_RastreioBtn3ActionPerformed
+
+    private void RastreioBtn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RastreioBtn4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_RastreioBtn4ActionPerformed
+
     public void close(){
         //frame.setVisible(false);
         //frame.dispose();
@@ -205,13 +387,25 @@ public class MainClinica extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel BtnPanel;
     private javax.swing.JPanel BtnPanel1;
+    private javax.swing.JPanel BtnPanel2;
+    private javax.swing.JPanel BtnPanel3;
+    private javax.swing.JPanel BtnPanel4;
+    private javax.swing.JPanel BtnPanel5;
     private javax.swing.JButton RastreioBtn;
+    private javax.swing.JButton RastreioBtn1;
+    private javax.swing.JButton RastreioBtn2;
+    private javax.swing.JButton RastreioBtn3;
+    private javax.swing.JButton RastreioBtn4;
     private javax.swing.JButton RegistoBtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
