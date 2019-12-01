@@ -8,6 +8,7 @@ package DOA;
 import MODEL.DBConnection;
 import MODEL.PagamentoModel;
 import java.sql.*;
+import java.util.ArrayList;
 
 /**
  *
@@ -45,8 +46,38 @@ public class PagamentoDao {
         } 
     } 
     
-    
-    
+    public ArrayList<PagamentoModel> getAll(){
+
+        try {
+            ArrayList<PagamentoModel> pagamentos = new ArrayList<PagamentoModel>();
+            
+            PreparedStatement stmt = this.conn.
+            prepareStatement("SELECT * FROM pagamentos");
+            ResultSet response = stmt.executeQuery();
+
+            while (response.next()) {
+                PagamentoModel paciente = new PagamentoModel();
+                
+                paciente.setId_pagamento(response.getInt("id_pagamento"));
+                paciente.setValor(response.getInt("valor"));
+                paciente.setNovo_estado(response.getString("novo_estado"));
+                
+                paciente.setId_paciente(response.getInt("id_paciente"));
+                paciente.setNome(response.getString("nome"));
+                paciente.setBilhete_identidade(response.getString("bilhete_identidade"));
+                paciente.setMorada(response.getString("morada"));
+                paciente.setIdade(response.getInt("idade"));
+                paciente.setWas_paid(response.getBoolean("was_paid"));
+
+                pagamentos.add(paciente);
+            }
+            response.close();
+            stmt.close();
+            return pagamentos;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
     
     
     

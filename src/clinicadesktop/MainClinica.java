@@ -176,12 +176,15 @@ public class MainClinica extends javax.swing.JPanel {
         BtnPanel3.setLayout(BtnPanel3Layout);
         BtnPanel3Layout.setHorizontalGroup(
             BtnPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BtnPanel3Layout.createSequentialGroup()
-                .addContainerGap(36, Short.MAX_VALUE)
-                .addGroup(BtnPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(AtendimentoBtn)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(39, 39, 39))
+            .addGroup(BtnPanel3Layout.createSequentialGroup()
+                .addContainerGap(50, Short.MAX_VALUE)
+                .addGroup(BtnPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BtnPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(39, 39, 39))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BtnPanel3Layout.createSequentialGroup()
+                        .addComponent(AtendimentoBtn)
+                        .addGap(25, 25, 25))))
         );
         BtnPanel3Layout.setVerticalGroup(
             BtnPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -374,6 +377,11 @@ public class MainClinica extends javax.swing.JPanel {
 
     private void AtendimentoBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AtendimentoBtnActionPerformed
         // TODO add your handling code here:
+        
+        Atendimento _atendimento = new Atendimento();
+        frame.add(_atendimento);
+        frame.setVisible(true);     
+                
     }//GEN-LAST:event_AtendimentoBtnActionPerformed
 
     private void ListaAtendidosBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListaAtendidosBtnActionPerformed
