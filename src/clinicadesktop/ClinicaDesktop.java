@@ -19,10 +19,9 @@ public class ClinicaDesktop {
     public static void main(String[] args) {
 
         JFrame frame = new JFrame();
-        Registo registo = new Registo();
-        Rastreio rastreio = new Rastreio();
+        MainClinica init = new MainClinica();
         
-        frame.add(rastreio);
+        frame.add(init);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
         frame.setSize(1500, 900);

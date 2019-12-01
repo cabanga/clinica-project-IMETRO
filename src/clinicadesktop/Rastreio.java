@@ -10,6 +10,7 @@ import DOA.RastreioDao;
 import MODEL.PacienteModel;
 import MODEL.RastreioModel;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /**
@@ -19,6 +20,7 @@ import javax.swing.JOptionPane;
 public class Rastreio extends javax.swing.JPanel {
 
     DefaultComboBoxModel paciente_list = new DefaultComboBoxModel();
+    private JFrame frame;
 
     public Rastreio() {
         initComponents();
@@ -32,6 +34,11 @@ public class Rastreio extends javax.swing.JPanel {
         status_list.addElement("Grave");
 
         EstadoSelect.setModel(status_list);
+        
+        frame  = new JFrame();
+        frame.setSize(1500, 900);
+        frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+
     }
 
     /**
@@ -110,7 +117,7 @@ public class Rastreio extends javax.swing.JPanel {
         jLabel5.setForeground(new java.awt.Color(0, 51, 51));
         jLabel5.setText("FAZER RASTREIO");
 
-        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\joao.c\\Downloads\\hospital (2).png")); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/logotipo.png"))); // NOI18N
 
         NamePaciente.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         NamePaciente.addActionListener(new java.awt.event.ActionListener() {
@@ -182,9 +189,9 @@ public class Rastreio extends javax.swing.JPanel {
                             .addComponent(NamePaciente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(NomePacienteLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(TemperaturaInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(TemperatursLabel))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(TemperatursLabel)
+                            .addComponent(TemperaturaInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(12, 12, 12)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(PressaoInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -220,7 +227,10 @@ public class Rastreio extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void CancelarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelarBtnActionPerformed
-        // TODO add your handling code here:
+        MainClinica init = new MainClinica();
+        
+        frame.add(init);
+        frame.setVisible(true);
     }//GEN-LAST:event_CancelarBtnActionPerformed
 
     private void RegistarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistarBtnActionPerformed
@@ -248,6 +258,11 @@ public class Rastreio extends javax.swing.JPanel {
             if(response){
                 JOptionPane.showMessageDialog(null, "Paciente rastreado com sucesso");
                 initForm();
+                
+                MainClinica init = new MainClinica();
+
+                frame.add(init);
+                frame.setVisible(true);
             }
                   
         }catch(Exception e){

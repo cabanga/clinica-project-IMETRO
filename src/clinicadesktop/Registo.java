@@ -7,6 +7,7 @@ package clinicadesktop;
 
 import DOA.PacienteDao;
 import MODEL.PacienteModel;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /**
@@ -14,12 +15,16 @@ import javax.swing.JOptionPane;
  * @author joao.c
  */
 public class Registo extends javax.swing.JPanel {
+    private JFrame frame;
 
     /**
      * Creates new form Rastreio
      */
     public Registo() {
         initComponents();
+        frame  = new JFrame();
+        frame.setSize(1500, 900);
+        frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
     }
 
     /**
@@ -102,7 +107,7 @@ public class Registo extends javax.swing.JPanel {
         jLabel5.setForeground(new java.awt.Color(0, 51, 51));
         jLabel5.setText("REGISTAR PACIENTE");
 
-        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\joao.c\\Downloads\\hospital (2).png")); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/logotipo.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -186,7 +191,10 @@ public class Registo extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void CancelarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelarBtnActionPerformed
-        // TODO add your handling code here:
+        MainClinica init = new MainClinica();
+        
+        frame.add(init);
+        frame.setVisible(true);
     }//GEN-LAST:event_CancelarBtnActionPerformed
 
     private void RegistarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistarBtnActionPerformed
@@ -206,6 +214,10 @@ public class Registo extends javax.swing.JPanel {
             if(response){
                 JOptionPane.showMessageDialog(null, "Paciente registado com sucesso");
                 initForm();
+                MainClinica init = new MainClinica();
+
+                frame.add(init);
+                frame.setVisible(true);
             }
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, e);
