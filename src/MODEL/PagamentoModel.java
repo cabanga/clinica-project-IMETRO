@@ -20,6 +20,8 @@ public class PagamentoModel {
     private String morada;
     private int idade;
     private boolean was_paid;
+    private boolean was_attended;
+    
 
     public int getId_pagamento() {
         return id_pagamento;
@@ -92,6 +94,18 @@ public class PagamentoModel {
     public void setWas_paid(boolean was_paid) {
         this.was_paid = was_paid;
     }
+
+    public boolean isWas_attended() {
+        return was_attended;
+    }
+
+    public void setWas_attended(boolean was_attended) {
+        this.was_attended = was_attended;
+    }
     
     
+    @Override
+    public String toString (){
+        return nome;
+    } 
 }
