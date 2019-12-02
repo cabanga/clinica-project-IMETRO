@@ -5,12 +5,16 @@
  */
 package DOA;
 
+import MODEL.AtendimentoModel;
 import MODEL.DBConnection;
 import MODEL.MedicoModel;
+import MODEL.PacienteModel;
 import MODEL.PagamentoModel;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 /**
  *
@@ -54,5 +58,46 @@ public class AtendimentoDao {
             throw new RuntimeException(e);
         } 
     }  
-      
+ 
+    public ArrayList<AtendimentoModel> getAll(){
+
+        try {
+            ArrayList<AtendimentoModel> pacientes = new ArrayList<AtendimentoModel>();
+            
+            PreparedStatement stmt = this.conn.
+            prepareStatement("SELECT * FROM atendimentos");
+            ResultSet response = stmt.executeQuery();
+
+            while (response.next()) {
+                AtendimentoModel paciente = new AtendimentoModel();
+                
+                paciente.setId_paciente(response.getInt("id_atendimento"));
+                paciente.setValor(response.getInt("valor"));
+                paciente.setEstado(response.getString("estado"));
+
+                //==============================================================
+                
+                paciente.setId_paciente(response.getInt("id_paciente"));
+                paciente.setNome(response.getString("nome"));
+                paciente.setBilhete_identidade(response.getString("bilhete_identidade"));
+                paciente.setMorada(response.getString("morada"));
+                paciente.setIdade(response.getInt("idade"));
+                
+                //==============================================================
+                
+                paciente.setId_medico(response.getInt("id_medico"));
+                paciente.setNome_medico(response.getString("nome_medico"));
+                paciente.setEspecialidade(response.getString("especialidade"));
+
+                pacientes.add(paciente);
+            }
+            response.close();
+            stmt.close();
+            return pacientes;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    
+    
 }

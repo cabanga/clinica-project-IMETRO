@@ -386,6 +386,9 @@ public class MainClinica extends javax.swing.JPanel {
 
     private void ListaAtendidosBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListaAtendidosBtnActionPerformed
         // TODO add your handling code here:
+        ListarAtendidos _pacientes_atendidos = new ListarAtendidos();
+        frame.add(_pacientes_atendidos);
+        frame.setVisible(true); 
     }//GEN-LAST:event_ListaAtendidosBtnActionPerformed
 
     private void ListaMedicosBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListaMedicosBtnActionPerformed
