@@ -133,6 +133,8 @@
                           <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
                           <Component id="NamePaciente" min="-2" pref="398" max="-2" attributes="0"/>
                           <Component id="RegistarBtn" alignment="0" min="-2" pref="186" max="-2" attributes="0"/>
+                          <Component id="jLabel10" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="NomeMedicoSelected" alignment="0" min="-2" pref="398" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
                   </Group>
@@ -153,6 +155,10 @@
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="NamePaciente" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="NomeMedicoSelected" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                               <Component id="RegistarBtn" min="-2" pref="33" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -273,6 +279,32 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RegistarBtnActionPerformed"/>
               </Events>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="NomeMedicoSelected">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="4">
+                    <StringItem index="0" value="Item 1"/>
+                    <StringItem index="1" value="Item 2"/>
+                    <StringItem index="2" value="Item 3"/>
+                    <StringItem index="3" value="Item 4"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NomeMedicoSelectedActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel10">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="18" style="0"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="33" green="33" red="0" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Nome do M&#xe9;dico"/>
+              </Properties>
             </Component>
           </SubComponents>
         </Container>

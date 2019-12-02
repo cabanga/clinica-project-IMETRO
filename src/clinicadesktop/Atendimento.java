@@ -5,8 +5,9 @@
  */
 package clinicadesktop;
 
+import DOA.AtendimentoDao;
 import DOA.PagamentoDao;
-import MODEL.PacienteModel;
+import MODEL.MedicoModel;
 import MODEL.PagamentoModel;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JFrame;
@@ -20,6 +21,7 @@ import javax.swing.table.DefaultTableModel;
 public class Atendimento extends javax.swing.JPanel {
     private JFrame frame;
     DefaultComboBoxModel paciente_list = new DefaultComboBoxModel();
+    DefaultComboBoxModel medico_list = new DefaultComboBoxModel();
 
     public Atendimento() {
         initComponents();
@@ -31,8 +33,13 @@ public class Atendimento extends javax.swing.JPanel {
         for(  PagamentoModel _pagamento : new PagamentoDao().getAllToAttended() ){
             paciente_list.addElement(_pagamento);
         }
+
+        for(  MedicoModel _medico : new PagamentoDao().getAllMedicos() ){
+            medico_list.addElement(_medico);
+        }
         
         NamePaciente.setModel(paciente_list);
+        NomeMedicoSelected.setModel(medico_list);
 
         initTable();
     }
@@ -76,6 +83,8 @@ public class Atendimento extends javax.swing.JPanel {
         jLabel9 = new javax.swing.JLabel();
         NamePaciente = new javax.swing.JComboBox();
         RegistarBtn = new javax.swing.JButton();
+        NomeMedicoSelected = new javax.swing.JComboBox();
+        jLabel10 = new javax.swing.JLabel();
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/favicon.png"))); // NOI18N
 
@@ -155,6 +164,17 @@ public class Atendimento extends javax.swing.JPanel {
             }
         });
 
+        NomeMedicoSelected.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        NomeMedicoSelected.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NomeMedicoSelectedActionPerformed(evt);
+            }
+        });
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(0, 51, 51));
+        jLabel10.setText("Nome do Médico");
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -172,7 +192,9 @@ public class Atendimento extends javax.swing.JPanel {
                     .addComponent(jLabel9)
                     .addComponent(jLabel8)
                     .addComponent(NamePaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 398, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(RegistarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(RegistarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel10)
+                    .addComponent(NomeMedicoSelected, javax.swing.GroupLayout.PREFERRED_SIZE, 398, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(100, 100, 100))
         );
         jPanel3Layout.setVerticalGroup(
@@ -189,6 +211,10 @@ public class Atendimento extends javax.swing.JPanel {
                         .addGap(18, 18, 18)
                         .addComponent(NamePaciente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
+                        .addComponent(jLabel10)
+                        .addGap(18, 18, 18)
+                        .addComponent(NomeMedicoSelected, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(RegistarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
@@ -232,9 +258,14 @@ public class Atendimento extends javax.swing.JPanel {
 
         try{
             PagamentoModel current_paciente = (PagamentoModel)NamePaciente.getSelectedItem();
+            MedicoModel current_medico = (MedicoModel)NomeMedicoSelected.getSelectedItem();
 
             PagamentoDao dao = new PagamentoDao();
-            boolean response = dao.Update(current_paciente);
+            dao.Update(current_paciente);
+            
+            AtendimentoDao atendimento_dao = new AtendimentoDao();
+
+            boolean response = atendimento_dao.Create(current_paciente, current_medico);
 
             if(response){
                 JOptionPane.showMessageDialog(null, "Paciente atendido com sucesso");
@@ -250,11 +281,17 @@ public class Atendimento extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_RegistarBtnActionPerformed
 
+    private void NomeMedicoSelectedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NomeMedicoSelectedActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NomeMedicoSelectedActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox NamePaciente;
+    private javax.swing.JComboBox NomeMedicoSelected;
     private javax.swing.JTable PagamentoTable;
     private javax.swing.JButton RegistarBtn;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
