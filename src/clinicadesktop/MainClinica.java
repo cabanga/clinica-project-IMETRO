@@ -393,6 +393,10 @@ public class MainClinica extends javax.swing.JPanel {
 
     private void ListaMedicosBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListaMedicosBtnActionPerformed
         // TODO add your handling code here:
+        Medicos _medicos = new Medicos();
+        frame.add(_medicos);
+        frame.setVisible(true); 
+        
     }//GEN-LAST:event_ListaMedicosBtnActionPerformed
 
     public void close(){

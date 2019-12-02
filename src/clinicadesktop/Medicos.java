@@ -6,7 +6,9 @@
 package clinicadesktop;
 
 import DOA.AtendimentoDao;
+import DOA.MedicoDao;
 import MODEL.AtendimentoModel;
+import MODEL.MedicoModel;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JFrame;
 import javax.swing.table.DefaultTableModel;
@@ -15,11 +17,11 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author joao.c
  */
-public class ListarAtendidos extends javax.swing.JPanel {
+public class Medicos extends javax.swing.JPanel {
     private JFrame frame;
     DefaultComboBoxModel paciente_list = new DefaultComboBoxModel();
 
-    public ListarAtendidos() {
+    public Medicos() {
         initComponents();
 
         frame  = new JFrame();
@@ -37,25 +39,17 @@ public class ListarAtendidos extends javax.swing.JPanel {
     
     public void initTable(){
         DefaultTableModel modelTable = new DefaultTableModel();
-        modelTable.addColumn("Nome");
-        modelTable.addColumn("Número do BI");
-        modelTable.addColumn("Morada");
-        modelTable.addColumn("Valor pago");
-        modelTable.addColumn("Seu medico");
+        modelTable.addColumn("Nome do médico");
         modelTable.addColumn("Especialidade");
         
-        for ( AtendimentoModel _paciente : new AtendimentoDao().getAll() ){
+        for ( MedicoModel _medico : new MedicoDao().getAll() ){
            modelTable.addRow(new Object[] {
-               _paciente.getNome(),
-               _paciente.getBilhete_identidade(),
-               _paciente.getMorada(),
-               _paciente.getValor(),
-               _paciente.getNome_medico(),
-               _paciente.getEspecialidade(),
+               _medico.getNome(),
+               _medico.getEspecialidade()
            });
         }
         
-        ListaMedicosTable.setModel(modelTable);
+        ListaAtendidosTable.setModel(modelTable);
     }
 
     /**
@@ -74,14 +68,14 @@ public class ListarAtendidos extends javax.swing.JPanel {
         jLabel6 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        ListaMedicosTable = new javax.swing.JTable();
+        ListaAtendidosTable = new javax.swing.JTable();
         jLabel5 = new javax.swing.JLabel();
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/favicon.png"))); // NOI18N
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 51, 51));
-        jLabel6.setText("LISTA DE ATENDIMENTO");
+        jLabel6.setText("LISTA DE MEDICOS");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -112,7 +106,7 @@ public class ListarAtendidos extends javax.swing.JPanel {
                     .addContainerGap(51, Short.MAX_VALUE)))
         );
 
-        ListaMedicosTable.setModel(new javax.swing.table.DefaultTableModel(
+        ListaAtendidosTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -123,7 +117,7 @@ public class ListarAtendidos extends javax.swing.JPanel {
                 "Nome do paciente", "Nº BI", "Valor Pago", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(ListaMedicosTable);
+        jScrollPane1.setViewportView(ListaAtendidosTable);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 51, 51));
@@ -183,7 +177,7 @@ public class ListarAtendidos extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTable ListaMedicosTable;
+    private javax.swing.JTable ListaAtendidosTable;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
